@@ -9,6 +9,7 @@ from settings.conf import * #noqa
 # ------------------------------------------------
 
 ROOT_URLCONF = 'urls.urls'
+
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
 )
