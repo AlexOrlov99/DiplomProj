@@ -9,6 +9,7 @@ from settings.conf import * #noqa
 # ------------------------------------------------
 
 ROOT_URLCONF = 'urls.urls'
+AUTH_USER_MODEL = 'auths.CustomUser'
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
@@ -29,9 +30,14 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'rest_framework',
+    'rest_framework_simplejwt',
     
 ]
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'abstracts.apps.AbstractsConfig',
+    'auths.apps.AuthsConfig',
+    'rezume.apps.RezumeConfig',
+]
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS
 
 # ------------------------------------------------
@@ -54,7 +60,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 TEMPLATES = [
     {

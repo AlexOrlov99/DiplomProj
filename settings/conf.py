@@ -42,17 +42,17 @@ SHELL_PLUS_PRE_IMPORTS = [
     ('json', ('loads', 'dumps')),
 ]
 SHELL_PLUS_MODEL_ALIASES = {
-    # 'auths': {
-    #     'CustomUser': 'U',
-    # },
-    # 'anime': {
-    #     'Student': 'S',
-    #     'Account': 'A',
-    #     'Group': 'G',
-    #     'Professor': 'P',
-    #     'Homework': 'H',
-    #     'File': 'FF',
-    # },
+    'auths': {
+        'CustomUser': 'U',
+    },
+    'rezume': {
+        'Student': 'S',
+        'Account': 'A',
+        'Group': 'G',
+        'Professor': 'P',
+        'Homework': 'H',
+        'File': 'FF',
+    },
 }
 SHELL_PLUS = 'Ipython'
 SHELL_PLUS_PRINT_SQL = True

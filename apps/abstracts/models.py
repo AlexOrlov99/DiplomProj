@@ -1,4 +1,4 @@
-from django.db.forms import (
+from django.db.models import (
     Model,
     DateTimeField
 )
